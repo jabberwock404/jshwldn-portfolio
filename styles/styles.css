@@ -1,0 +1,42 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#holder {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+}
+
+#left {
+  flex-grow: 100;
+  min-width: 1em;
+  max-width: 4em;
+}
+
+#middle {
+  max-width: 31em;
+}
+
+#right {
+  min-width: 1em;
+  flex-grow: 100;
+}
+
+
+.add_blink h1::after {
+  content: '|';
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
